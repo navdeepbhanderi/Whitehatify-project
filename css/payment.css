@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&family=Poppins&family=Raleway&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+.text-center {
+  text-align: center;
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --payment-img: url("../img/bgcheckout.jpg");
+  --payment-font: #000;
+  --li-payment-color: rgba(15, 23, 42, 0.1);
+  --payment-detail-color: rgb(255 255 255);
+  --label-background: rgb(255 255 255);
+  --select-background: #fff;
+}
+.darkmode {
+  --payment-img: rgb(17 24 39 / var(--tw-text-opacity));
+  --payment-font: #fff;
+  --li-payment-color: rgb(75, 75, 75);
+  --payment-detail-color: rgb(255 255 255/0.1);
+  --label-background: rgb(37, 48, 69);
+  --select-background: rgb(37, 48, 69);
+}
+
+.main-payment {
+  position: relative;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+.main-payment .payment h1 {
+  margin: 0.5rem 0rem;
+  margin-top: 1.5rem;
+}
+
+.main-payment::before {
+  content: "";
+  position: absolute;
+  background: var(--payment-img) center center/cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.payment {
+  width: 75rem;
+  height: 30rem;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--payment-font);
+}
+.payment ul {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.payment ul li {
+  list-style: none;
+  margin-right: 0.6rem;
+}
+:root {
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(15, 23, 42, 0.1);
+}
+.biling-details {
+  position: relative;
+  width: 48rem;
+  background-color: var(--payment-detail-color);
+  border-radius: 1.5rem;
+
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
+  border-color: rgba(47, 65, 95, 0.5);
+  padding: 2rem;
+}
+
+.biling-details h4 {
+  margin-bottom: 0.3rem;
+}
+
+.checkout {
+  width: 27rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--li-payment-color);
+}
+.checkout ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.checkout ul li {
+  border: 1px solid var(--li-payment-color);
+  padding: 2rem;
+  width: 100.2%;
+  border: none;
+}
+.checkout ul .line {
+  width: 28rem;
+  height: 1px;
+  border-bottom: 1px solid var(--li-payment-color);
+}
+.line2 {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--li-payment-color);
+}
+
+.mb-4 {
+  margin-bottom: 0.6rem;
+}
+.price-txt {
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.container-price {
+  width: 22rem;
+}
+
+.checkout ul .first-li {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.checkout .container-li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(148, 163, 184, 0.1);
+  border-radius: 50px;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.container-li:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 11px -5px;
+}
+.checkout .container-li .part1 {
+  display: flex;
+  align-items: center;
+}
+
+.payment-btn {
+  margin: 1rem 0rem;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  transition-property: color, width, background-color;
+  padding: 0.5rem 0.75rem;
+  --tw-bg-opacity: 1;
+  border-radius: 0.5rem;
+  background-color: var(--cp-color-13);
+  transition: 0.3s ease-in-out;
+  border: var(--border-size);
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+}
+.payment-btn:hover {
+  background-color: var(--cp-color-13-hover);
+}
+.payment-btn input {
+  color: #fff;
+  text-decoration: none;
+}
+/*   color variables */
+:root {
+  --clr-primary: #cdcdcd;
+  --clr-primary-light: #cdcdcd;
+  --clr-primary-dark: #091034;
+  --clr-gray100: #f9fbff;
+  --clr-gray150: #f4f6fb;
+  --clr-gray200: #eef1f6;
+  --clr-gray300: #e1e5ee;
+  --clr-gray400: #767b91;
+  --clr-gray500: #4f546c;
+  --clr-gray600: #2a324b;
+  --clr-gray700: #161d34;
+  --clr-bg: #060b23;
+
+  --radius: 0.4rem;
+}
+
+body {
+  font-family: "Convergence", sans-serif;
+}
+
+.form {
+  position: relative;
+  margin: 8px 0px;
+  height: 2.7rem;
+  width: 100%;
+}
+
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.2px solid var(--clr-gray300);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--color-dark);
+  outline: none;
+  padding: 0.6rem;
+  background: none;
+  padding-left: 1rem;
+}
+.form__input:hover {
+  border-color: var(--clr-primary-light);
+}
+
+/* Change border when input focus*/
+
+.form__input:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 1px 4px 0 rgba(32, 33, 36, 0.28);
+}
+
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.7rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  transition: top 150ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  color: var(--color-dark);
+  background-color: var(--label-background);
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.mx-1 {
+  margin-left: 1rem;
+}
+select {
+  background: var(--select-background);
+}

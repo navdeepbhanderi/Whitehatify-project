@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&family=Raleway&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root {
+  --label-background: rgb(255 255 255);
+  --detail-color: rgb(255 255 255);
+  --primary: white;
+  --signin-font: #000;
+  --cp-color-13: #1a73e8;
+  --cp-color-13-hover: #1f549a;
+  --footer-img-opacity: 0;
+}
+.darkmode {
+  --footer-img-opacity: 1;
+  --label-background: rgb(37, 48, 69);
+  --detail-color: rgb(255 255 255/0.1);
+  --signin-font: #fff;
+
+  --cp-color-13-hsl: 227.3684210526deg 12.2580645161% 30.3921568627%;
+  --primary: #393a3f;
+  --cp-color-13: hsl(var(--cp-color-13-hsl));
+
+  --cp-color-13-hover: rgb(139, 139, 139);
+}
+
+body {
+  background: var(--primary);
+}
+
+.signinpage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 475px;
+  font-family: "Lato", sans-serif;
+}
+.signinpage2 {
+  display: flex;
+  margin: 0rem 1rem;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  /* border: 2px solid red; */
+}
+.img-part {
+  width: 23rem;
+  border-radius: 6px 0px 0px 6px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.img-part::before {
+  content: "";
+  position: absolute;
+  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hard-work-quotes-index-1584934510.jpg?crop=1.00xw:0.755xh;0,0.139xh&resize=980:*")
+    center center/cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.signin-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 23rem;
+  padding: 50px 32px;
+  background-color: var(--detail-color);
+  border-radius: 0px 6px 6px 0px;
+}
+.signin-part h2 {
+  text-align: center;
+  margin: 0rem 0rem 1.2rem 0rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--signin-font);
+}
+.signin-part h3 {
+  color: var(--signin-font);
+}
+.signin-part p {
+  text-align: center;
+  margin: 1rem;
+  font-size: 11px;
+  margin-top: 1.4rem;
+  color: var(--signin-font);
+}
+
+.forgotpass {
+  display: flex;
+  justify-content: flex-end;
+}
+.forgotpass a {
+  margin-top: -2px;
+  color: var(--signin-font);
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+.btnn {
+  padding: 8px 0px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  border-radius: 3px;
+  margin: 1.2rem 0rem 1rem 0rem;
+  transition: bacground 0.1s ease;
+  width: 19rem;
+}
+.btnn:hover {
+  background: #474747;
+}
+
+.lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lines hr {
+  width: 25%;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background-color: #e8e8e8;
+}
+.lines1 hr {
+  width: 20%;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background-color: #e8e8e8;
+}
+.google-btn {
+  display: flex;
+  justify-content: center;
+}
+.lines span a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--signin-font);
+}
+
+.errortext {
+  color: #dc3545;
+  text-align: left;
+  font-size: 11px;
+}
+.field .error {
+  display: none;
+}
+.field.error .error {
+  display: block;
+}
+form .field.error input {
+  border-color: #dc3545;
+}
+.moves {
+  animation: shake 0.2s ease-in-out infinite;
+}
+@keyframes shake {
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+  40%,
+  60% {
+    margin-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .img-part {
+    display: none;
+  }
+}
+
+/*   color variables */
+:root {
+  --clr-primary: #cdcdcd;
+  --clr-primary-light: #dcdcdc;
+  --clr-primary-dark: #091034;
+  --clr-gray100: #f9fbff;
+  --clr-gray150: #f4f6fb;
+  --clr-gray200: #eef1f6;
+  --clr-gray300: #e1e5ee;
+  --clr-gray400: #767b91;
+  --clr-gray500: #4f546c;
+  --clr-gray600: #2a324b;
+  --clr-gray700: #161d34;
+  --clr-bg: #060b23;
+
+  --radius: 0.4rem;
+}
+
+body {
+  font-family: "Convergence", sans-serif;
+}
+
+.form {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 2.7rem;
+  margin-top: 1rem;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.2px solid var(--clr-gray300);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--signin-font);
+  outline: none;
+  padding: 0.6rem;
+  background: none;
+  padding-left: 1rem;
+}
+.form__input:hover {
+  border-color: var(--clr-primary-light);
+}
+
+/* Change border when input focus*/
+
+.form__input:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 1px 4px 0 rgba(32, 33, 36, 0.28);
+}
+
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.67rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  transition: top 150ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  color: var(--signin-font);
+  background-color: var(--label-background);
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.form .errortext {
+  position: absolute;
+  top: 2.7rem;
+}
+
+.btn2 {
+  margin: 0px 4px;
+  border-radius: 4px;
+  border: 1px solid rgb(213, 213, 241);
+  cursor: pointer;
+  font-size: 14px;
+  list-style: none;
+  background-color: var(--cp-color-13);
+  color: white;
+  padding: 0.8em 2em;
+  transition: 0.3s ease-in-out;
+  border: var(--border-size);
+}
+.btn a {
+  text-decoration: none;
+}
+.btn2:hover {
+  background-color: var(--cp-color-13-hover);
+}
+
+.field {
+  position: relative;
+}
+#eye1 {
+  position: absolute;
+  top: 10px;
+  right: 6px;
+  cursor: pointer;
+  filter: invert(var(--footer-img-opacity));
+}

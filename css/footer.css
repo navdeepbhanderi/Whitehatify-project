@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&family=Raleway&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root {
+  --dark-mode-footer: #616161;
+  --footer-img-opacity: 0;
+}
+.darkmode {
+  --footer-img-opacity: 1;
+  --dark-mode-footer: #fff;
+}
+
+.footer {
+  font-family: sans-serif;
+  /* height: 850px; */
+  width: 100%;
+  color: var(--dark-mode-footer);
+  background: var(--background-color);
+  border-top: 1px solid var(--bottom-border-color);
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 30%), inset 0 -1px 0 0 #dadce0;
+}
+.footer nav {
+  display: flex;
+  align-items: center;
+  height: 5em;
+  margin: auto;
+  width: 71%;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.footer ul {
+  display: flex;
+}
+.footer .footer-m20 li {
+  margin: 0px 17px;
+}
+.footer li {
+  display: flex;
+  align-items: center;
+  margin: 0px 27px;
+  list-style: none;
+}
+.footer li svg {
+  position: inherit;
+  width: 24px;
+  opacity: 0.7;
+  filter: invert(var(--footer-img-opacity));
+}
+.footer li svg:hover {
+  opacity: 0.8;
+}
+.inputsearch input {
+  height: 45px;
+  border: none;
+  font-size: 14px;
+  padding: 0em 3em;
+  width: 25em;
+  color: #616161;
+  background-color: #eee;
+  border-radius: 2px;
+  outline: none;
+}
+
+.footeritems {
+  display: flex;
+  width: 75%;
+  margin: auto;
+}
+
+.footerparts {
+  /* width: 205px; */
+  height: auto;
+  margin: 0em 1em;
+  /* border: 2px solid blue; */
+}
+
+.footerparts ul {
+  display: inline;
+}
+.footeritems li {
+  padding: 6px 0px;
+}
+.footerparts li a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--dark-mode-footer);
+}
+.footerparts h4 {
+  font-size: medium;
+  margin: 4px 0px;
+}
+
+.footerend {
+  width: 71%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border-top: 1px solid #d7d7d7;
+  margin-top: 20px;
+}
+.footerend ul {
+  display: flex;
+  align-items: center;
+}
+.footerend li {
+  margin: 0px;
+}
+.footerend li a {
+  padding-left: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--dark-mode-footer);
+}

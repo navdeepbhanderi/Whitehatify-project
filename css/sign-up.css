@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&family=Raleway&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --label-background: rgb(255 255 255);
+  --detail-color: rgb(255 255 255);
+  --signup-font: #000;
+  --cp-color-13: #1a73e8;
+  --cp-color-13-hover: #1f549a;
+  --footer-img-opacity: 0;
+}
+.darkmode {
+  --footer-img-opacity: 1;
+  --label-background: rgb(37, 48, 69);
+  --detail-color: rgb(255 255 255/0.1);
+  --signup-font: #fff;
+
+  --cp-color-13-hsl: 227.3684210526deg 12.2580645161% 30.3921568627%;
+  --cp-color-13: hsl(var(--cp-color-13-hsl));
+
+  --cp-color-13-hover: rgb(139, 139, 139);
+}
+
+.signuppage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  font-family: "Lato", sans-serif;
+  margin: 1rem 0rem;
+}
+.signuppage2 {
+  display: flex;
+  margin: 0rem 1rem;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  /* border: 2px solid red; */
+}
+
+.signup-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50rem;
+  padding: 50px 32px;
+  background-color: var(--detail-color);
+  border-radius: 6px;
+}
+.signup-part h2 {
+  text-align: center;
+  margin: 0rem 0rem 1.2rem 0rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--signup-font);
+}
+.signup-part p {
+  text-align: center;
+  font-size:14px;
+}
+.signup-part .fieldss {
+  display: flex;
+
+  width: 100%;
+}
+
+.btnclass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errortext {
+  color: #dc3545;
+  text-align: left;
+  font-size: 11px;
+  margin-top: 4px;
+}
+.field .error {
+  display: none;
+}
+.field.error .error {
+  display: block;
+}
+form .field.error input {
+  border-color: #dc3545;
+}
+
+.form .errortext {
+  position: absolute;
+  top: 2.4rem;
+}
+
+.namefield {
+  display: flex;
+}
+.moves {
+  /* animation: shake 0.2s ease-in-out infinite; */
+}
+@keyframes shake {
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+  40%,
+  60% {
+    margin-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .namefield {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-part {
+    width: 30rem;
+  }
+  .mx-1 {
+    margin-left: 0rem;
+  }
+  input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .signup-part {
+    width: 25rem;
+  }
+  .mx-1 {
+    margin-left: 0rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .signup-part {
+    width: 20rem;
+    margin: 0px;
+  }
+  .mx-1 {
+    margin-left: 0rem;
+  }
+}
+
+/*   color variables */
+:root {
+  --clr-primary: #cdcdcd;
+  --clr-primary-light: #cdcdcd;
+  --clr-primary-dark: #091034;
+  --clr-gray100: #f9fbff;
+  --clr-gray150: #f4f6fb;
+  --clr-gray200: #eef1f6;
+  --clr-gray300: #e1e5ee;
+  --clr-gray400: #767b91;
+  --clr-gray500: #4f546c;
+  --clr-gray600: #2a324b;
+  --clr-gray700: #161d34;
+  --clr-bg: #060b23;
+
+  --radius: 0.4rem;
+}
+
+body {
+  font-family: "Convergence", sans-serif;
+}
+
+.form {
+  position: relative;
+  margin: 8px 0px;
+  height: 2.7rem;
+  width: 100%;
+}
+
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.2px solid var(--clr-gray300);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--signup-font);
+  outline: none;
+  padding: 0.6rem;
+  background: none;
+  padding-left: 1rem;
+}
+.form__input:hover {
+  border-color: var(--clr-primary-light);
+}
+
+/* Change border when input focus*/
+
+.form__input:focus {
+  border-color: var(--clr-primary);
+  /* box-shadow: 0 1px 4px 0 rgba(32, 33, 36, .28); */
+}
+
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.67rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  transition: top 150ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  color: var(--signup-font);
+  background-color: var(--label-background);
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.lines p,
+a {
+  color: var(--signup-font);
+}
+
+.btnn {
+  padding: 8px 134px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  border-radius: 3px;
+  margin: 1rem 0rem 1rem 0rem;
+  background-color: var(--cp-color-13);
+  transition: 0.3s ease-in-out;
+}
+.btnn:hover {
+  background-color: var(--cp-color-13-hover);
+}
+
+.field {
+  position: relative;
+}
+#eyeimg1 {
+  position: absolute;
+  top: 10px;
+  right: 6px;
+  cursor: pointer;
+  filter: invert(var(--footer-img-opacity));
+}
+#eyeimg2 {
+  position: absolute;
+  top: 10px;
+  right: 6px;
+  cursor: pointer;
+  filter: invert(var(--footer-img-opacity));
+}
+
+.mx-1{
+  margin-left: 0.75rem;
+}

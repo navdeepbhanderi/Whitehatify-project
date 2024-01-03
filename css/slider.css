@@ -1,0 +1,104 @@
+.slider-container{
+    height: 24rem;
+    max-width: 92rem;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;    
+    margin:1.5rem auto;
+    display: flex;
+}
+.slide{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+}
+.slide-img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px #bdb9b9;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    background-color: white;
+}
+
+.next{
+    position: absolute;
+    right: 0;
+    transform: translate(-5px,192px);
+    cursor: pointer;
+}
+.prev{
+    position: absolute;
+    transform: translate(5px,192px);
+    
+    cursor: pointer;
+}
+
+.slide:nth-child(1){
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.slide:nth-child(1) .part1{
+    width: 30%;
+    height: 100%;
+    background-color: #83c0fc;
+}
+.slide:nth-child(1) .part2{
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+ .slide:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    /* background: #83c0fc; */
+    background: linear-gradient(90deg ,rgb(222, 222, 222) , transparent 70%),url("../img/slider7.jpg")center center/cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slide:nth-child(1) h1{
+    color: #1d2a3b;
+    width: 20rem;
+    position: absolute;
+    transform: translate(40px,33px);
+}
+#button{
+    position: absolute;
+    border: none;
+    background: #1d2a3b;
+    color: white;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translate(40px,221px);
+}
+#button:hover{
+    background: #1c1f22;
+}
+
+
+.slide a{
+    text-decoration: none;
+}
